@@ -7,14 +7,8 @@ Formbuilder.registerField 'paragraph',
   """
 
   edit: """
-    <%= Formbuilder.templates['edit/size']() %>
-    <%= Formbuilder.templates['edit/min_max_length']() %>
   """
 
   addButton: """
-    <span class="symbol">&#182;</span> Paragraph
+    <span class="symbol">&#182;</span> Area di testo
   """
-
-  defaultAttributes: (attrs) ->
-    attrs.field_options.size = 'small'
-    attrs

@@ -7,14 +7,8 @@ Formbuilder.registerField 'text',
   """
 
   edit: """
-    <%= Formbuilder.templates['edit/size']() %>
-    <%= Formbuilder.templates['edit/min_max_length']() %>
   """
 
   addButton: """
-    <span class='symbol'><span class='fa fa-font'></span></span> Text
+    <span class='symbol'><span class='fa fa-font'></span></span> Casella di testo
   """
-
-  defaultAttributes: (attrs) ->
-    attrs.field_options.size = 'small'
-    attrs

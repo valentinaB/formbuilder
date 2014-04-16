@@ -3,6 +3,7 @@
 <head>
   <title>Form Builder</title>
   <meta name="description" content="">
+  <meta charset='utf-8'>
   <link rel="stylesheet" href="vendor/css/vendor.css" />
   <link rel="stylesheet" href="dist/formbuilder.css" />
   <style>
@@ -40,25 +41,36 @@
 
   <script>
     $(function(){
+
+      window.Formbuilder.options.AUTOSAVE = false;
+
+      window.Formbuilder.options.dict = {
+          ALL_CHANGES_SAVED: 'Modifiche salvate',
+          SAVE_FORM: 'Salva',
+          UNSAVED_CHANGES: 'Ci sono modifiche non salvate. Seabbandoni questa pagina perderai le modifiche fatte!'
+      }
+
       fb = new Formbuilder({
         selector: '.fb-main',
         bootstrapData: [
           {
-            "label": "Do you have a website?",
+            "label": "Hai un sito web?",
             "field_type": "website",
             "required": false,
-            "field_options": {},
+            "field_options": {
+              "description": "Inserisci l'indirizzo completo. Es.: http://www.ilmiositoweb.it"
+            },
             "cid": "c1"
           },
           {
-            "label": "Please enter your clearance number",
+            "label": "Inserisci il codice promozionale",
             "field_type": "text",
             "required": true,
             "field_options": {},
             "cid": "c6"
           },
           {
-            "label": "Security personnel #82?",
+            "label": "Sei assicurato?",
             "field_type": "radio",
             "required": true,
             "field_options": {
@@ -69,12 +81,12 @@
                     "label": "No",
                     "checked": false
                 }],
-                "include_other_option": true
+                "include_other_option": false
             },
             "cid": "c10"
           },
           {
-            "label": "Medical history",
+            "label": "Allega un file... qualcosa, vedi tu.",
             "field_type": "file",
             "required": true,
             "field_options": {},

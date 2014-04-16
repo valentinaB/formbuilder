@@ -1,9 +1,9 @@
-<div class='fb-edit-section-header'>Options</div>
+<div class='fb-edit-section-header'>Opzioni</div>
 
 <% if (typeof includeBlank !== 'undefined'){ %>
   <label>
     <input type='checkbox' data-rv-checked='model.<%= Formbuilder.options.mappings.INCLUDE_BLANK %>' />
-    Include blank
+    Includi scelta vuota
   </label>
 <% } %>
 
@@ -14,13 +14,13 @@
   <a class="js-remove-option <%= Formbuilder.options.BUTTON_CLASS %>" title="Remove Option"><i class='fa fa-minus-circle'></i></a>
 </div>
 
-<% if (typeof includeOther !== 'undefined'){ %>
+<% if (includeOther === true){ %>
   <label>
     <input type='checkbox' data-rv-checked='model.<%= Formbuilder.options.mappings.INCLUDE_OTHER %>' />
-    Include "other"
+    Includi "altro"
   </label>
 <% } %>
 
 <div class='fb-bottom-add'>
-  <a class="js-add-option <%= Formbuilder.options.BUTTON_CLASS %>">Add option</a>
+  <a class="js-add-option <%= Formbuilder.options.BUTTON_CLASS %>">Aggiungi opzione</a>
 </div>

@@ -25,11 +25,11 @@ Formbuilder.registerField 'checkboxes',
   """
 
   edit: """
-    <%= Formbuilder.templates['edit/options']({ includeOther: true }) %>
+    <%= Formbuilder.templates['edit/options']({ includeOther: false }) %>
   """
 
   addButton: """
-    <span class="symbol"><span class="fa fa-square-o"></span></span> Checkboxes
+    <span class="symbol"><span class="fa fa-square-o"></span></span> Check box
   """
 
   defaultAttributes: (attrs) ->
