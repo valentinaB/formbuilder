@@ -4,24 +4,13 @@ Formbuilder.registerField 'date',
 
   view: """
     <div class='input-line'>
-      <span class='month'>
-        <input type="text" />
-        <label>MM</label>
-      </span>
+      <input type="text" class="date-widget date-field day"> /
+      <select class="date-widget date-field">
+       <option value="1">gennaio</option>
+      </select> /
+      <input type="text" class="date-widget date-field year">
 
-      <span class='above-line'>/</span>
-
-      <span class='day'>
-        <input type="text" />
-        <label>DD</label>
-      </span>
-
-      <span class='above-line'>/</span>
-
-      <span class='year'>
-        <input type="text" />
-        <label>YYYY</label>
-      </span>
+      <a class="caltrigger"></a>
     </div>
   """
 

@@ -669,7 +669,7 @@
 (function() {
   Formbuilder.registerField('date', {
     order: 20,
-    view: "<div class='input-line'>\n  <span class='month'>\n    <input type=\"text\" />\n    <label>MM</label>\n  </span>\n\n  <span class='above-line'>/</span>\n\n  <span class='day'>\n    <input type=\"text\" />\n    <label>DD</label>\n  </span>\n\n  <span class='above-line'>/</span>\n\n  <span class='year'>\n    <input type=\"text\" />\n    <label>YYYY</label>\n  </span>\n</div>",
+    view: "<div class='input-line'>\n  <input type=\"text\" class=\"date-widget date-field day\"> /\n  <select class=\"date-widget date-field\">\n   <option value=\"1\">gennaio</option>\n  </select> /\n  <input type=\"text\" class=\"date-widget date-field year\">\n\n  <a class=\"caltrigger\"></a>\n</div>",
     edit: "",
     addButton: "<span class=\"symbol\"><span class=\"fa fa-calendar\"></span></span> Data"
   });
