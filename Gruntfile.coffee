@@ -66,13 +66,22 @@ module.exports = (grunt) ->
             'bower_components/jquery-ui/ui/jquery.ui.droppable.js'
             'bower_components/jquery-ui/ui/jquery.ui.sortable.js'
             'bower_components/jquery.scrollWindowTo/index.js'
-            'bower_components/underscore/underscore-min.js'
+            'bower_components/underscore/underscore.js'
             'bower_components/underscore.mixin.deepExtend/index.js'
             'bower_components/rivets/dist/rivets.js'
             'bower_components/backbone/backbone.js'
             'bower_components/backbone-deep-model/src/deep-model.js'
+          ],
+          '<%= distFolder %>/formbuilder-plone-integration.js': [
+            'bower_components/ie8-node-enum/index.js'
+            'bower_components/jquery.scrollWindowTo/index.js'
+            'bower_components/underscore/underscore.js'
+            'bower_components/underscore.mixin.deepExtend/index.js'
+            'bower_components/rivets/dist/rivets.js'
+            'bower_components/backbone/backbone.js'
+            'bower_components/backbone-deep-model/src/deep-model.js',
+            '<%= compiledFolder %>/*.js'
           ]
-
     cssmin:
       dist:
         files:

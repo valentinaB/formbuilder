@@ -14,7 +14,7 @@
   <a class="js-remove-option <%= Formbuilder.options.BUTTON_CLASS %>" title="Remove Option"><i class='fa fa-minus-circle'></i></a>
 </div>
 
-<% if (includeOther === true){ %>
+<% if (typeof includeOther !== 'undefined' && includeOther === true){ %>
   <label>
     <input type='checkbox' data-rv-checked='model.<%= Formbuilder.options.mappings.INCLUDE_OTHER %>' />
     Includi "altro"

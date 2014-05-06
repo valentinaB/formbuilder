@@ -928,7 +928,7 @@ __p += '\n\n<div class=\'option\' data-rv-each-option=\'model.' +
 '" title="Add Option"><i class=\'fa fa-plus-circle\'></i></a>\n  <a class="js-remove-option ' +
 ((__t = ( Formbuilder.options.BUTTON_CLASS )) == null ? '' : __t) +
 '" title="Remove Option"><i class=\'fa fa-minus-circle\'></i></a>\n</div>\n\n';
- if (includeOther === true){ ;
+ if (typeof includeOther !== 'undefined' && includeOther === true){ ;
 __p += '\n  <label>\n    <input type=\'checkbox\' data-rv-checked=\'model.' +
 ((__t = ( Formbuilder.options.mappings.INCLUDE_OTHER )) == null ? '' : __t) +
 '\' />\n    Includi "altro"\n  </label>\n';
