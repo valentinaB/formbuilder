@@ -6,7 +6,7 @@ class FormbuilderModel extends Backbone.DeepModel
   is_input: ->
     Formbuilder.inputFields[@get(Formbuilder.options.mappings.FIELD_TYPE)]?
 
-
+    
 class FormbuilderCollection extends Backbone.Collection
   initialize: ->
     @on 'add', @copyCidToModel
