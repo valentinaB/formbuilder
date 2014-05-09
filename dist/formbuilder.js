@@ -646,7 +646,7 @@
 
 (function() {
   Formbuilder.registerField('checkboxes', {
-    order: 10,
+    order: 20,
     view: "<% for (i in (rf.get(Formbuilder.options.mappings.OPTIONS) || [])) { %>\n  <div>\n    <label class='fb-option'>\n      <input type='checkbox' <%= rf.get(Formbuilder.options.mappings.OPTIONS)[i].checked && 'checked' %> onclick=\"javascript: return false;\" />\n      <%= rf.get(Formbuilder.options.mappings.OPTIONS)[i].label %>\n    </label>\n  </div>\n<% } %>\n\n<% if (rf.get(Formbuilder.options.mappings.INCLUDE_OTHER)) { %>\n  <div class='other-option'>\n    <label class='fb-option'>\n      <input type='checkbox' />\n      Other\n    </label>\n\n    <input type='text' />\n  </div>\n<% } %>",
     edit: "<%= Formbuilder.templates['edit/options']({ includeOther: false }) %>",
     addButton: "<span class=\"symbol\"><span class=\"fa fa-square-o\"></span></span> Check box",
@@ -668,7 +668,7 @@
 
 (function() {
   Formbuilder.registerField('date', {
-    order: 20,
+    order: 30,
     view: "<div class='input-line'>\n  <input type=\"text\" class=\"date-widget date-field day\"> /\n  <select class=\"date-widget date-field\">\n   <option value=\"1\">gennaio</option>\n  </select> /\n  <input type=\"text\" class=\"date-widget date-field year\">\n\n  <a class=\"caltrigger\"></a>\n</div>",
     edit: "",
     addButton: "<span class=\"symbol\"><span class=\"fa fa-calendar\"></span></span> Data"
@@ -678,7 +678,7 @@
 
 (function() {
   Formbuilder.registerField('dropdown', {
-    order: 24,
+    order: 25,
     view: "<select>\n  <% if (rf.get(Formbuilder.options.mappings.INCLUDE_BLANK)) { %>\n    <option value=''></option>\n  <% } %>\n\n  <% for (i in (rf.get(Formbuilder.options.mappings.OPTIONS) || [])) { %>\n    <option <%= rf.get(Formbuilder.options.mappings.OPTIONS)[i].checked && 'selected' %>>\n      <%= rf.get(Formbuilder.options.mappings.OPTIONS)[i].label %>\n    </option>\n  <% } %>\n</select>",
     edit: "<%= Formbuilder.templates['edit/options']({ includeBlank: true }) %>",
     addButton: "<span class=\"symbol\"><span class=\"fa fa-caret-down\"></span></span> Menù a discesa",
@@ -701,7 +701,7 @@
 
 (function() {
   Formbuilder.registerField('email', {
-    order: 40,
+    order: 10,
     view: "<input type='text' class='rf-size-<%= rf.get(Formbuilder.options.mappings.SIZE) %>' />",
     edit: "",
     addButton: "<span class=\"symbol\"><span class=\"fa fa-envelope-o\"></span></span> Email"
@@ -711,7 +711,7 @@
 
 (function() {
   Formbuilder.registerField('file', {
-    order: 55,
+    order: 40,
     view: "<input type='file' />",
     edit: "",
     addButton: "<span class=\"symbol\"><span class=\"fa fa-cloud-upload\"></span></span> File"
@@ -763,20 +763,10 @@
 
 (function() {
   Formbuilder.registerField('time', {
-    order: 25,
+    order: 35,
     view: "<div class='input-line'>\n  <span class='hours'>\n    <input type=\"text\" />\n    <label>HH</label>\n  </span>\n\n  <span class='above-line'>:</span>\n\n  <span class='minutes'>\n    <input type=\"text\" />\n    <label>MM</label>\n  </span>\n\n  <span class='above-line'>:</span>\n\n  <span class='seconds'>\n    <input type=\"text\" />\n    <label>SS</label>\n  </span>\n\n  <span class='am_pm'>\n    <select>\n      <option>AM</option>\n      <option>PM</option>\n    </select>\n  </span>\n</div>",
     edit: "",
     addButton: "<span class=\"symbol\"><span class=\"fa fa-clock-o\"></span></span> Ora"
-  });
-
-}).call(this);
-
-(function() {
-  Formbuilder.registerField('website', {
-    order: 35,
-    view: "<input type='text' placeholder='http://' />",
-    edit: "",
-    addButton: "<span class=\"symbol\"><span class=\"fa fa-link\"></span></span> URL"
   });
 
 }).call(this);

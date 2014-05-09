@@ -1,6 +1,6 @@
 Formbuilder.registerField 'dropdown',
 
-  order: 24
+  order: 25
 
   view: """
     <select>

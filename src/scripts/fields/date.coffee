@@ -1,6 +1,6 @@
 Formbuilder.registerField 'date',
 
-  order: 20
+  order: 30
 
   view: """
     <div class='input-line'>

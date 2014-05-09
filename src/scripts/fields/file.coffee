@@ -1,6 +1,6 @@
 Formbuilder.registerField 'file',
 
-  order: 55
+  order: 40
 
   view: """
     <input type='file' />

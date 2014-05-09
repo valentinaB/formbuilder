@@ -1,6 +1,6 @@
 Formbuilder.registerField 'email',
 
-  order: 40
+  order: 10
 
   view: """
     <input type='text' class='rf-size-<%= rf.get(Formbuilder.options.mappings.SIZE) %>' />
