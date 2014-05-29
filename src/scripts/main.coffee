@@ -6,7 +6,7 @@ class FormbuilderModel extends Backbone.DeepModel
   is_input: ->
     Formbuilder.inputFields[@get(Formbuilder.options.mappings.FIELD_TYPE)]?
 
-    
+
 class FormbuilderCollection extends Backbone.Collection
   initialize: ->
     @on 'add', @copyCidToModel
@@ -358,7 +358,7 @@ class Formbuilder
   @helpers:
     defaultFieldAttrs: (field_type) ->
       attrs = {}
-      attrs[Formbuilder.options.mappings.LABEL] = 'Untitled'
+      attrs[Formbuilder.options.mappings.LABEL] = 'Senza titolo'
       attrs[Formbuilder.options.mappings.FIELD_TYPE] = field_type
       attrs[Formbuilder.options.mappings.REQUIRED] = true
       attrs['field_options'] = {}
