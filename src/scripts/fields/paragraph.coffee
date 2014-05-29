@@ -10,5 +10,5 @@ Formbuilder.registerField 'paragraph',
   """
 
   addButton: """
-    <span class="symbol">&#182;</span> Area di testo
+    <span class="symbol"><span class="fa fa-paragraph"></span></span> Area di testo
   """
