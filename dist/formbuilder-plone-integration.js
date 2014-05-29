@@ -4902,7 +4902,7 @@ $.scrollWindowTo = function(pos, duration, cb) {
       defaultFieldAttrs: function(field_type) {
         var attrs, _base;
         attrs = {};
-        attrs[Formbuilder.options.mappings.LABEL] = 'Untitled';
+        attrs[Formbuilder.options.mappings.LABEL] = 'Senza titolo';
         attrs[Formbuilder.options.mappings.FIELD_TYPE] = field_type;
         attrs[Formbuilder.options.mappings.REQUIRED] = true;
         attrs['field_options'] = {};
