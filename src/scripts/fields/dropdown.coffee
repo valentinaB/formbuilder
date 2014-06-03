@@ -26,10 +26,10 @@ Formbuilder.registerField 'dropdown',
 
   defaultAttributes: (attrs) ->
     attrs.field_options.options = [
-      label: "",
+      label: "Prima opzione",
       checked: false
     ,
-      label: "",
+      label: "Seconda opzione",
       checked: false
     ]
 

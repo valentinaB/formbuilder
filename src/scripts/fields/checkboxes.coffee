@@ -6,7 +6,7 @@ Formbuilder.registerField 'checkboxes',
     <% for (i in (rf.get(Formbuilder.options.mappings.OPTIONS) || [])) { %>
       <div>
         <label class='fb-option'>
-          <input type='checkbox' <%= rf.get(Formbuilder.options.mappings.OPTIONS)[i].checked && 'checked' %> onclick="javascript: return false;" />
+          <input type='checkbox' onclick="javascript: return false;" />
           <%= rf.get(Formbuilder.options.mappings.OPTIONS)[i].label %>
         </label>
       </div>
@@ -25,7 +25,7 @@ Formbuilder.registerField 'checkboxes',
   """
 
   edit: """
-    <%= Formbuilder.templates['edit/options']({ includeOther: false }) %>
+    <%= Formbuilder.templates['edit/options']({ includeOther: false, showChecked: false }) %>
   """
 
   addButton: """
@@ -34,10 +34,10 @@ Formbuilder.registerField 'checkboxes',
 
   defaultAttributes: (attrs) ->
     attrs.field_options.options = [
-      label: "",
+      label: "Prima opzione",
       checked: false
     ,
-      label: "",
+      label: "Seconda opzione",
       checked: false
     ]
 

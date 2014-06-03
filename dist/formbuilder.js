@@ -647,16 +647,16 @@
 (function() {
   Formbuilder.registerField('checkboxes', {
     order: 20,
-    view: "<% for (i in (rf.get(Formbuilder.options.mappings.OPTIONS) || [])) { %>\n  <div>\n    <label class='fb-option'>\n      <input type='checkbox' <%= rf.get(Formbuilder.options.mappings.OPTIONS)[i].checked && 'checked' %> onclick=\"javascript: return false;\" />\n      <%= rf.get(Formbuilder.options.mappings.OPTIONS)[i].label %>\n    </label>\n  </div>\n<% } %>\n\n<% if (rf.get(Formbuilder.options.mappings.INCLUDE_OTHER)) { %>\n  <div class='other-option'>\n    <label class='fb-option'>\n      <input type='checkbox' />\n      Other\n    </label>\n\n    <input type='text' />\n  </div>\n<% } %>",
-    edit: "<%= Formbuilder.templates['edit/options']({ includeOther: false }) %>",
+    view: "<% for (i in (rf.get(Formbuilder.options.mappings.OPTIONS) || [])) { %>\n  <div>\n    <label class='fb-option'>\n      <input type='checkbox' onclick=\"javascript: return false;\" />\n      <%= rf.get(Formbuilder.options.mappings.OPTIONS)[i].label %>\n    </label>\n  </div>\n<% } %>\n\n<% if (rf.get(Formbuilder.options.mappings.INCLUDE_OTHER)) { %>\n  <div class='other-option'>\n    <label class='fb-option'>\n      <input type='checkbox' />\n      Other\n    </label>\n\n    <input type='text' />\n  </div>\n<% } %>",
+    edit: "<%= Formbuilder.templates['edit/options']({ includeOther: false, showChecked: false }) %>",
     addButton: "<span class=\"symbol\"><span class=\"fa fa-square-o\"></span></span> Check box",
     defaultAttributes: function(attrs) {
       attrs.field_options.options = [
         {
-          label: "",
+          label: "Prima opzione",
           checked: false
         }, {
-          label: "",
+          label: "Seconda opzione",
           checked: false
         }
       ];
@@ -685,10 +685,10 @@
     defaultAttributes: function(attrs) {
       attrs.field_options.options = [
         {
-          label: "",
+          label: "Prima opzione",
           checked: false
         }, {
-          label: "",
+          label: "Seconda opzione",
           checked: false
         }
       ];
@@ -738,10 +738,10 @@
     defaultAttributes: function(attrs) {
       attrs.field_options.options = [
         {
-          label: "",
+          label: "Si",
           checked: false
         }, {
-          label: "",
+          label: "No",
           checked: false
         }
       ];
@@ -903,7 +903,11 @@ __p += '\n  <label>\n    <input type=\'checkbox\' data-rv-checked=\'model.' +
  } ;
 __p += '\n\n<div class=\'option\' data-rv-each-option=\'model.' +
 ((__t = ( Formbuilder.options.mappings.OPTIONS )) == null ? '' : __t) +
-'\'>\n  <input type="checkbox" class=\'js-default-updated\' data-rv-checked="option:checked" />\n  <input type="text" data-rv-input="option:label" class=\'option-label-input\' />\n  <a class="js-add-option ' +
+'\'>\n  ';
+ if (typeof showChecked == 'undefined' || showChecked == true){ ;
+__p += '\n    <input type="checkbox" class=\'js-default-updated\' data-rv-checked="option:checked" />\n  ';
+ } ;
+__p += '\n  <input type="text" data-rv-input="option:label" class=\'option-label-input\' />\n  <a class="js-add-option ' +
 ((__t = ( Formbuilder.options.BUTTON_CLASS )) == null ? '' : __t) +
 '" title="Add Option"><i class=\'fa fa-plus\'></i></a>\n  <a class="js-remove-option ' +
 ((__t = ( Formbuilder.options.BUTTON_CLASS )) == null ? '' : __t) +

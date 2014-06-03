@@ -35,10 +35,10 @@ Formbuilder.registerField 'radio',
   defaultAttributes: (attrs) ->
     # @todo
     attrs.field_options.options = [
-      label: "",
+      label: "Si",
       checked: false
     ,
-      label: "",
+      label: "No",
       checked: false
     ]
 
